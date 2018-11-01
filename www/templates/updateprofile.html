@@ -1,0 +1,63 @@
+
+
+<ion-view view-title="Update Details" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <ion-nav-title style="color:white;">
+    Update Details
+  </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+
+      <form name="myform">
+
+        <div class="form-group">
+          <label for="text">First Name</label>
+          <input type="text" name="firstname"  ng-model="data.firstname" class="form-control" placeholder="First Name" required>
+          <span ng-show="myform.firstname.$touched && myform.firstname.$invalid" style="color:red">The firstname is required.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Last Name</label>
+          <input type="text" name="lastname" class="form-control" ng-model="data.lastname" placeholder="Last Name" required>
+          <span ng-show="myform.lastname.$touched && myform.lastname.$invalid" style="color:red">The lastname is required.</span>
+        </div>
+        <div class="form-group">
+          <label for="text">Address</label>
+          <input type="text" name="address" class="form-control" ng-model="data.address" placeholder="Address" required>
+          <span ng-show="myform.address.$touched && myform.address.$invalid" style="color:red">The address is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">State</label>
+          <input type="text" name="state" class="form-control"  ng-model="data.state"  placeholder="State" required>
+          <span ng-show="myform.state.$touched && myform.state.$invalid" style="color:red">The state is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">Zip Code</label>
+          <input type="number" name="zipcode" class="form-control" id="txtAddress" ng-model="data.zip"  placeholder="Zip Code" ng-blur="GetLocation(data.zipcode)" required>
+          <span ng-show="myform.zipcode.$touched && myform.zipcode.$invalid" style="color:red">The zipcode is required.</span>
+
+        </div>
+
+        <div class="form-group">
+          <label for="text">Phone Number</label>
+          <input type="number" name="phone" class="form-control" ng-model="data.phone" placeholder="Phone Number" required>
+          <span ng-show="myform.phone.$touched && myform.phone.$invalid" style="color:red">The phone is required.</span>
+        </div>
+
+        <div class="col-xs-6">
+          <input type="button" class="form-control sub text-default"  value="Cancel" ng-click="canceUpdatel()">
+        </div>
+        <div class="col-xs-6">
+          <input type="button" class="form-control sub text-default"  value="Submit" ng-click="updateDetails()" ng-disabled="myform.$invalid">
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>
+

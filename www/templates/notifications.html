@@ -1,0 +1,23 @@
+<ion-view view-title="Notifications" >
+    <ion-nav-title style="color:white;">
+        Notification's
+    </ion-nav-title>
+    <ion-content >
+        
+        
+        <ion-item ng-repeat="notification in notifications" >
+            
+            <h4>GroupName : <b>{{notification.groupName}}</b></h4>
+            
+            <span style="width:50%;float:left">
+                
+                <h4 style="margin-top:10px">Id : <b>{{notification.id}}</b></h4>
+                <h4 style="margin-top:10px">SentBy : <b>{{ notification.sentName}}</b></h4>
+            </span>
+            <span style="width:50%;float:right" ng-if="leader">
+                <input type="button" style="width:70px;position:fixed;right:0;margin-right:30px" class=" disabled form-control sub "  value="Accept" ng-click="accept(item,notification.id,notification.status)">
+                    </span>
+        </ion-item>
+        
+    </ion-content>
+</ion-view>

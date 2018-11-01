@@ -1,0 +1,324 @@
+input
+{
+  border-radius: 6px! important;
+}
+
+html, body, #wrapper {
+   height:100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+#wrapper td {
+   vertical-align: middle;
+   text-align: center;
+}
+
+
+#footer {
+  position : absolute;
+  bottom : 0;
+  height : 40px;
+  margin-top : 40px;
+}
+
+#footer123{
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+    background: #6c2a0c;
+    line-height: 2;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+
+#footer1234{
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+    background: #E7E7E8;
+    line-height: 2;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+#header123{
+  position: fixed;
+    top: 0;
+    width: 100%;
+    padding:10px;
+    background: #E7E7E8;
+    line-height: 2;
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    border-bottom:1px solid #606163
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.item-checkbox{
+    ion-checkbox{
+        button.item-cover{
+            width: 15%;
+        }
+    }
+
+    ion-label{
+        button.item-cover{
+            width: 85%;
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+input[type=button]
+{
+  background: #e63640 !important;
+  position:relative;
+  border: none;
+  color:#fff;
+  margin-bottom: 20px;
+  font-size: 16px;
+  opacity:1
+}
+.header-menu {
+
+  //height:30vh;
+}
+
+.header-menu1 {
+  background-color: #6c2a0c;
+  height:20vh;
+}
+.nav-bar-block, .bar {
+  background-color: inherit !important;
+}
+#over
+{
+    position:absolute;
+    width:100%;
+    height:20vh;
+    text-align: center; /*handles the horizontal centering*/
+}
+/*handles the vertical centering*/
+.Centerer
+{
+    display: inline-block;
+    height: 20vh;
+    vertical-align: middle;
+}
+.Centered
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.my-menu {
+  background-color: #6c2a0c;
+  color:white
+}
+.my-menu .list , .my-menu .item ,.my-menu .item-content {
+    background-color: #6c2a0c;
+    color:white
+}
+
+.color_bg
+{
+  background: #6c2a0c !important;
+}
+
+.logo
+{
+  background: url('../img/5mhope_background1.png');
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.wrap-login100 {
+  width: 100%;
+  /*background: #fff;*/
+  border-radius: 10px;
+  position: absolute;
+  bottom:60px;
+  }
+
+  .wrap-register100 {
+    width: 100%;
+    /*background: #fff;*/
+    border-radius: 10px;
+    position: fixed;
+    bottom:5px;
+    }
+
+    .wrap-forgotpwd100 {
+      width: 100%;
+      /*background: #fff;*/
+      border-radius: 10px;
+      position: fixed;
+      bottom:160px;
+      }
+
+  #email1
+  {
+    padding: 0 5px;
+    border:1px solid #ccc
+  }
+
+#pwd1
+{
+      padding: 0 5px;
+      border:1px solid #ccc
+
+    }
+
+input
+{
+  background:#fff !important;
+  opacity: .5;
+}
+
+
+.im
+{
+  position: absolute !important;
+  top: 814%;
+  width: 27%;
+  left: 67%;
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: white;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin:0 auto;
+    margin-top:200px
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+#countdown {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+#countdown-number {
+    color: black;
+    display: inline-block;
+    line-height: 40px;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
+}
+
+.modal-wrapper .modal{
+    display:block !important;
+}

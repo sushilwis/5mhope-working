@@ -1,0 +1,75 @@
+<!--<ion-view view-title="Groups" >
+  <ion-nav-title style="color:white;">
+      Home
+    </ion-nav-title>
+  <ion-content>
+    <div id="map"></div>
+       <script>
+       // The following example creates complex markers to indicate beaches near
+ // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+ // to the base of the flagpole.
+
+ function initMap() {
+   var map = new google.maps.Map(document.getElementById('map'), {
+     zoom: 10,
+     center: {lat: 17.38, lng: 78.48}
+   });
+
+   setMarkers(map);
+ }
+
+ // Data for the markers consisting of a name, a LatLng and a zIndex for the
+ // order in which these markers should display on top of each other.
+
+ var beaches = [
+   ['SC', 17.5170626, 78.5549691, 4],
+   ['SC', 17.5170626, 78.5649691, 5],
+   ['Hyderabad', 17.4433571, 78.38221109999999, 3],
+   ['SC', 17.5170626, 78.5349691, 2],
+   ['SC', 17.5170626, 78.5249691, 1],
+   ['SC', 17.5170626, 78.5149691, 1]
+ ];
+
+         var data = angular.element(document.getElementById('yourControllerElementID')).scope().data;
+
+
+ function setMarkers(map) {
+
+   var image = {
+     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+     size: new google.maps.Size(20, 32),
+     origin: new google.maps.Point(0, 0),
+     anchor: new google.maps.Point(0, 32)
+   };
+    var shape = {
+     coords: [1, 1, 1, 20, 18, 20, 18, 1],
+     type: 'poly'
+   };
+   for (var i = 0; i < beaches.length; i++) {
+     var beach = beaches[i];
+     var marker = new google.maps.Marker({
+       position: {lat: beach[1], lng: beach[2]},
+       map: map,
+       icon: image,
+       shape: shape,
+       title: beach[0],
+       zIndex: beach[3]
+     });
+   }
+ }
+       </script>
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXwuOUibSxULTSPK8wBGm9Zezw373IxPQ&callback=initMap"
+       async defer></script>  </ion-content>
+</ion-view>-->
+<ion-view>
+    <ion-nav-title style="color:white;">
+  Home
+</ion-nav-title>
+<ion-content>
+  <div id="map"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsebjaC_GQngLXaioMyaUKG8qIJ3tBnU0"></script>
+</ion-content>
+</ion-view>

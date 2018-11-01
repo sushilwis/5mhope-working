@@ -1,0 +1,25 @@
+<ion-view view-title="Songs">
+  <ion-nav-title style="color:white;">
+    ForeverJones
+  </ion-nav-title>
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item ng-repeat="song in songs" ng-click="open{{song.url}}">
+
+        <span style="width:30%;float:right">
+          <label> album : {{song.name}}</label>
+          <h3 style="margin-top:10px"> artist :{{ song.artist}}</h3>
+          <h3> Song : {{song.songName}}</h3>
+           <h3> time : {{song.time}}</h3>
+        </span>
+        <span style="width:70%;float:left">
+         <img ng-src="{{song.image}}" style="height:100px">
+
+        </span>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

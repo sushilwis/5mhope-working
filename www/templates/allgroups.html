@@ -1,0 +1,20 @@
+<ion-view view-title="All Groups" >
+  <ion-nav-title style="color:white;">
+      All Groups
+    </ion-nav-title>
+  <ion-content >
+    <ion-list>
+
+      <ion-item ng-repeat="group in groups">
+        <span style="width:50%;float:left">
+          <label>{{group.name}}</label>
+          <h4 style="margin-top:10px">Date : <b>{{ group.created | date }}</b></h4>
+        </span>
+        <span style="width:50%;float:right">
+          <input type="button" style="width:50px;position:fixed;right:0;margin-right:30px" class=" disabled form-control sub " id="pwd" value="Join" ng-click="join(group.id,group.userId)">
+        </span>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

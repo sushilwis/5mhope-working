@@ -1,0 +1,70 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<ion-view >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <ion-nav-title style="color:white;">
+    Add Group
+  </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+
+
+      <form action="/action_page.php" name="myform">
+        <div class="form-group">
+          <label for="text">Group Name</label>
+          <input type="text" class="form-control" name="groupname" placeholder="Group Name" ng-model="val.groupname" required>
+          <span ng-show="myform.groupname.$touched && myform.groupname.$invalid" style="color:red">The groupname is required.</span>
+        </div>
+        <div class="form-group">
+          <label for="text">Zip Code</label>
+          <input type="text" class="form-control" name="zipcode"  id="txtAddress" placeholder="Zip Code" ng-model="val.zipcode"  ng-blur="GetLocation(val.zipcode)" required>
+          <span ng-show="myform.zipcode.$touched && myform.zipcode.$invalid" style="color:red">The zipcode is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">City</label>
+          <input type="text" class="form-control" name="city" placeholder="City" ng-model="val.city" required>
+          <span ng-show="myform.city.$touched && myform.city.$invalid" style="color:red">The city is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">State</label>
+          <input type="text" class="form-control" name="state" placeholder="State" ng-model="val.state" required>
+          <span ng-show="myform.state.$touched && myform.state.$invalid" style="color:red">The state is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">Country</label>
+          <input type="text" class="form-control" name="country" placeholder="Country" ng-model="val.country" required>
+          <span ng-show="myform.country.$touched && myform.country.$invalid" style="color:red">The country is required.</span>
+
+        </div>
+        <div class="form-group" ng-show="loc">
+          <label for="text">City : {{city}}</label>
+          <label for="text">State : {{state}}</label>
+          <label for="text">Country : {{country}}</label>
+        </div>
+
+        <div class="col-xs-6">
+
+          <input type="button" class="form-control sub text-default"  value="Cancel" ng-click="cancel()">
+        </div>
+        <div class="col-xs-6">
+          <input type="button" class=" disabled form-control sub "  value="Submit" ng-click="addgroup()"  >
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>
+</body>
+</html>

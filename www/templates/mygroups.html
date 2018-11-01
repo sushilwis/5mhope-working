@@ -1,0 +1,20 @@
+<ion-view view-title="Groups" >
+  <ion-nav-title style="color:white;">
+      Groups
+    </ion-nav-title>
+  <ion-content >
+    <ion-list>
+
+      <ion-item ng-repeat="group in groups" ng-click="getGroupDetails(group.id,group)">
+        <span style="width:50%;float:left">
+          <label>{{group.name}}</label>
+          <h4 style="margin-top:10px">Date : {{ group.created | date }}</h4>
+        </span>
+        <span style="width:50%;float:right">
+          <i class="fa fa-angle-right" style="float:right;color:black;vertical-align: middle;margin-right:10px;margin-top:20px"></i>
+        </span>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="Groups">
+  <ion-nav-title style="color:white;">
+      Home
+    </ion-nav-title>
+  <ion-content >
+    <ion-list>
+
+      <ion-item ng-repeat="group in groups">
+        <span style="width:50%;float:left">
+          <label>{{group.name}}</label>
+          <h4 style="margin-top:10px">Date : {{ group.created | date }}</h4>
+        </span>
+        <span style="width:50%;float:right;">
+          <button ng-click="deleteGroup(group)" style="float:right;background:red;color:white;border:1px red solid;vertical-align: middle;margin-right:10px;margin-top:20px"><i class="fa fa-trash" ></i></button>
+          <button ng-show="false" ng-click="editGroup(group)" style="float:right;background:green;color:white;border:1px green solid;vertical-align: middle;margin-right:10px;margin-top:20px"><i class="fa fa-pencil-square-o" ></i></button>
+        </span>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

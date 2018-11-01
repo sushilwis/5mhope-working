@@ -1,0 +1,31 @@
+
+<ion-view view-title="My Groups" >
+  <ion-nav-title style="color:white;">
+    Become A Leader
+  </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+
+      <form action="/action_page.php" >
+        <div class="form-group">
+          <label for="text">Select Leader Type</label>
+          <select class="form-control"
+                  ng-model="selected_id"
+                  ng-options="o.id as o.name for o in options"
+                  ng-change="songs(selected_id)">
+          </select>
+
+        </div>
+
+        <div class="col-xs-6">
+          <input type="button" class="form-control sub text-default" id="pwd1" value="Submit" ng-click="becomeleader(selected_id)">
+        </div>
+        <div class="col-xs-6">
+          <input type="button" class="form-control sub text-default" id="pwd" value="Cancel" ng-click="cancel123()">
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>

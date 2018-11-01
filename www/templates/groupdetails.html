@@ -1,0 +1,26 @@
+<ion-view view-title="Group Details" >
+  <ion-nav-title style="color:white;">
+      {{groupname}}
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+      <button style="background:transparent;border:0">
+        <i class="fa fa-user-plus" style="color:white;font-size:20px" ng-click="inviteuser(id)"></i>
+      </button>
+    </ion-nav-buttons>
+  <ion-content >
+    <ion-list>
+
+      <ion-item>
+        <label>Number of Users : {{users.length}}</label>
+      </ion-item>
+
+      <ion-item ng-repeat="user in users">
+        <span style="margin-left:20px">
+          <label>{{user.name}}</label>
+        </span>
+
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

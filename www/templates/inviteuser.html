@@ -1,0 +1,27 @@
+<ion-view view-title="Invite User" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <ion-nav-title style="color:white;">
+      Invite User
+    </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12"  style="margin-top:30px">
+    <form action="/action_page.php">
+        <div class="form-group">
+        <label for="email">Email Id</label>
+        <input type="text" class="form-control" id="email1" placeholder="Enter Email Id" ng-model="data.email">
+        </div>
+
+        <div class="col-xs-6">
+        <input type="button" class="form-control sub text-default" id="pwd1" value="Cancel" ng-click="cancel()">
+        </div>
+        <div class="col-xs-6">
+        <input type="button" class="form-control sub text-default" id="pwd1" value="Submit" ng-click="inviteuser()">
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>

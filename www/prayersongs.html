@@ -1,0 +1,36 @@
+<ion-view view-title="Timer" >
+  <ion-nav-title style="color:white;">
+      Timer : {{interval}}
+    </ion-nav-title>
+
+  <ion-content class="padding" >
+    <div>
+      <span>
+        <label><b>Prayer Topic</b></label><br>
+        <h7 style="margin-top:10px">{{name}}</h7>
+      </span>
+    </div>
+    <br>
+    <div>
+      <span>
+        <label><b>Scriptures</b></label><br>
+        <h7 style="margin-top:10px">{{scriptures}}</h7>
+      </span>
+    </div>
+    <br>
+    <div>
+      <span>
+        <label><b>Prayer</b></label><br>
+        <h7 style="margin-top:10px">{{prayer}}</h7>
+      </span>
+    </div>
+
+  </ion-content>
+  <!--<div class = "bar bar-footer bar-stable" ng-style="{'background-color': viewColor}">
+    <input type="button" class=" disabled form-control sub " id="pwd" value="Save" ng-click="save({{verses}})">
+</div>-->
+<div id="footer123" ng-click="selectsong()">
+  <i class="fa fa-angle-up" style="float:left;color:white;margin-left:0px;vertical-align:middle;margin-right:10px;margin;top:5px;font-size:20px" ></i>
+
+  Select Song</div>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-modal-view style="background:#E7E7E8">
+    
+    <div id="header123">
+        Prayer Time 
+    </div>
+    
+    <ion-content class="padding" >
+        <div class="list card" style="margin-top:80px">
+            <div class="item">
+                <h2><i class="icon ion-ios-musical-notes"></i> {{albumTitle || '--'}}</h2>
+                <p>{{path|| '--'}}</p>
+            </div>
+            <div class="item item-body">
+                <div ng-hide="loaded">
+                    <label>Please select a Media file to play</label>
+                </div>
+                
+                
+                <div  ng-show="loaded" style="height: 30px; width: {{position}}%; transition: width 0.1s; background: #e42012;border:1px solid">
+                </div>
+                <div class="row">
+                    <span class="col col-50">{{songelapsedtime}}</span>
+                    <span class="col col-50" style="text-align:right">{{songduetime}}</span>
+                </div>
+            </div>
+            
+            
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" style="color: #e42112;font-weight: bold;" href="javascript:" ng-click="resumeAudio()" ng-hide="isPlaying || !loaded">
+                    <i class="icon ion-ios-play"></i> Play
+                </a>
+<!--                <a class="tab-item" style="color: #e42112;font-weight: bold;" href="javascript:" ng-click="pauseAudio()" ng-hide="isPlaying">-->
+<!--                    <i class="icon ion-pause"></i> Pause-->
+<!--                </a>-->
+                <a class="tab-item" style="color: #e42112;font-weight: bold;" href="javascript:" ng-click="stopAudio()" ng-show="isPlaying">
+                    <i class="icon ion-stop"></i> Stop
+                </a>
+            </div>
+        </div>
+
+        <p align="center">
+        <b>{{prayername}}</b>
+        </p>
+        <p align="center">
+        {{prayer}}
+        </p>
+        <p align="center">
+        {{scriptures}}
+        </p>
+    </ion-content>
+    
+    
+    
+</ion-modal-view>

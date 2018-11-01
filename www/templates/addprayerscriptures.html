@@ -1,0 +1,41 @@
+<ion-view view-title="Add Prayer" >
+  <ion-nav-title style="color:white;">
+    Add Prayer
+  </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="text">Prayer Topic</label>
+          <input type="text" class="form-control" ng-model="data.knowingGodMore" placeholder="Prayer Topic">
+        </div>
+        <div class="form-group">
+          <label for="text">Minutes</label>
+          <input type="text" class="form-control" ng-model="data.minutes" placeholder="Minutes">
+        </div>
+        <div class="form-group">
+          <label for="text">Scriptures</label>
+          <!--<input type="text" class="form-control" id="email1" placeholder="Scriptures">-->
+          <textarea type="text" ng-model="scriptures" cols="40" rows="5" class="form-control" id="pwd1" placeholder="Scriptures"></textarea>
+          <span style="color:silver">Click + to load from Online</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">Prayer</label>
+          <!--<input type="text" class="form-control" id="email1" placeholder="prayer">-->
+          <textarea type="text" cols="40" rows="5" class="form-control"  ng-model="data.godPrayer" placeholder="prayer"></textarea>
+        </div>
+        <div class="col-xs-11">
+          <input type="button" class="form-control sub text-default" id="pwd" value="Submit" ng-click="savePrayer()">
+        </div>
+
+      </form>
+    </div>
+
+  </ion-content>
+
+  <ion-floating-button click="loadfromonline()" has-footer="false" button-color="#e63640 " icon="ion-plus" icon-color="#fff">
+  </ion-floating-button>
+</ion-view>

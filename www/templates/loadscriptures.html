@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<ion-view view-title="Load Scriptures" >
+  <ion-nav-title style="color:white;">
+    Load Scriptures
+  </ion-nav-title>
+  <ion-content has-footer>
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+    <form action="/action_page.php" >
+        <div class="form-group">
+        <label for="text">Select Books</label>
+        <select class="form-control"
+        ng-model="selected_id"
+        ng-options="o.value as o.title for o in booksList"
+        ng-change="getChapters(selected_id)">
+        </select>
+
+        </div>
+      </form>
+
+
+
+<br>
+        <div ng-show="display">
+          <span><b>Book Name : </b>{{scriptures.book_name}}</span><br>
+          <span><b>Version : </b>{{scriptures.version}}</span><br>
+          <span><b>Type : </b>{{scriptures.type}}</span><br><br>
+
+          <div ng-repeat="chapter in chapters" >
+            <b><font color="red">Chapter :{{chapter.chapter_nr}}</font></b><br><hr>
+
+          <div ng-repeat="verse in verses" style="margin:5px" class="row">
+            <div class="col col-10">
+              <input type="checkbox" name="verse" value="{{verse.name}}" ng-model="selectedVerses[verse]">
+            </div>
+            <div class="col col-90"> {{verse}}</div>
+
+            </div>
+          </div>
+    </div>
+  </div>
+  </ion-content>
+  <div class = "bar bar-footer bar-assertive">
+    <input type="button" class=" disabled form-control sub " id="pwd" value="Save" ng-click="save({{selectedVerses}})">
+</div>
+
+</ion-view>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<ion-view view-title="Login" class="logo">
+  <ion-content  scroll="false" >
+
+    <!--<img src="img/logo.png" style="position:absolute;left:0;right: 0; margin:0 auto">-->
+    <!--<table id="wrapper">
+      <tr>
+        <td><img src="img/logo.png" alt="" /></td>
+      </tr>
+    </table>-->
+
+    <div class="wrap-login100">
+     <table id="wrapper">
+        <tr>
+          <td><img src="img/logo.png" alt="" /></td>
+        </tr>
+      </table>
+      <form action="/action_page.php" style="padding:20px;margin-top:100px">
+        <div class="form-group">
+          <label for="email">User name:</label>
+          <input type="text" class="form-control input" id="email1" placeholder="User name" ng-model="val.email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="{{inputType}}" class="form-control" id="pwd1" placeholder="Password" ng-model="val.password">
+        </div>
+        <div>
+          <span ><input  type="checkbox" ng-click="hideShowPassword()"> Show Password</span>
+        </div>
+        <br>
+
+
+        <input type="button" class="form-control sub text-default" id="networkInfo()" value="Log in" ng-click="login()">
+        <div class="row">
+          <div class="col col-50">
+            <p><a href="#register">Register</a></p>
+          </div>
+          <div class="col col-50">
+            <a href="#forgotpassword">Forgot Password</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>
+</body>
+</html>

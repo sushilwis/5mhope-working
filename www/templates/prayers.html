@@ -1,0 +1,23 @@
+<ion-view view-title="Prayers" >
+  <ion-nav-title style="color:white;">
+      Prayers
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+      <button style="background:transparent;border:0">
+          <span style="color:white;" ng-click="addPrayer()">Add</span>
+      </button>
+    </ion-nav-buttons>
+  <ion-content >
+    <ion-list>
+
+      <ion-item ng-repeat="prayer in prayers" ng-click="prayerSongs(prayer)">
+        <span>
+          <label>{{prayer.name}}</label>
+          <h4 style="margin-top:10px">Date : {{ prayer.created | date }}&nbsp;&nbsp;&nbsp;&nbsp;{{prayer.interval}} Minutes</h4>
+        </span>
+
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,55 @@
+<ion-view view-title="User Details" >
+  <ion-nav-title style="color:white;">
+    User Details
+  </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+
+      <form name="myform">
+        <div class="form-group">
+          <label for="text">First Name</label>
+          <input type="text" name="firstname"  ng-model="val.Firstname" class="form-control" placeholder="First Name" required>
+          <span ng-show="myform.firstname.$touched && myform.firstname.$invalid" style="color:red">The firstname is required.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Last Name</label>
+          <input type="text" name="lastname" class="form-control" ng-model="val.lastname" placeholder="Last Name" required>
+          <span ng-show="myform.lastname.$touched && myform.lastname.$invalid" style="color:red">The lastname is required.</span>
+        </div>
+        <div class="form-group">
+          <label for="text">Address</label>
+          <input type="text" name="address" class="form-control" ng-model="val.address" placeholder="Address" required>
+          <span ng-show="myform.address.$touched && myform.address.$invalid" style="color:red">The address is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">State</label>
+          <input type="text" name="state" class="form-control" ng-model="val.state"  placeholder="State" required>
+          <span ng-show="myform.state.$touched && myform.state.$invalid" style="color:red">The state is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">Zip Code</label>
+          <input type="number" name="zipcode" class="form-control" ng-model="val.zip" placeholder="Zip Code" required>
+          <span ng-show="myform.zipcode.$touched && myform.zipcode.$invalid" style="color:red">The zipcode is required.</span>
+
+        </div>
+        <div class="form-group">
+          <label for="text">Phone Number</label>
+          <input type="number" name="phone" class="form-control" ng-model="val.phone" placeholder="Phone Number" required>
+          <span ng-show="myform.phone.$touched && myform.phone.$invalid" style="color:red">The phone is required.</span>
+
+        </div>
+        <div class="col-xs-6">
+          <input type="button" class="form-control sub text-default"  value="Cancel" ng-click="canceUpdatel()">
+        </div>
+        <div class="col-xs-6">
+          <input type="button" class="form-control sub text-default"  value="Submit" ng-click="detailsAdd()" ng-disabled="myform.$invalid">
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>
